@@ -7,7 +7,7 @@ import { Customer } from './customer.model';
   providedIn: 'root',
 })
 export class CustomerService {
-  private readonly endpoint = environment.endpoints.customers;
+  private readonly endpoint = environment.apiUrl + environment.endpoints.customers;
 
   constructor(private httpClient: HttpClient) { }
 

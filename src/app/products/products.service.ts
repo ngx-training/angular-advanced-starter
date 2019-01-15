@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class ProductsService {
-  private readonly endpoint = environment.endpoints.products;
+  private readonly endpoint = environment.apiUrl + environment.endpoints.products;
 
   constructor(private httpClient: HttpClient) { }
 

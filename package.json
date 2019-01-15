@@ -70,6 +70,7 @@
     "@ngrx/store": "6.1.0",
     "@ngrx/store-devtools": "6.1.0",
     "core-js": "^2.5.7",
+    "cors": "^2.8.5",
     "ngrx-store-freeze": "0.2.4",
     "ngrx-store-localstorage": "5.0.1",
     "rxjs": "^6.2.2",

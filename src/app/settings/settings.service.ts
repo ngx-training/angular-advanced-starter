@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Settings, Theme } from './settings.model';
 import { catchError, tap } from 'rxjs/operators';
 import { Subject, throwError } from 'rxjs';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +14,7 @@ export class SettingsService {
   themeChanged$ = this.themeListener.asObservable();
   /* tslint:enable */
 
-  private readonly ENDPOINT = '/api/settings';
+  private readonly ENDPOINT = environment.apiUrl + '/api/settings';
 
   constructor(private httpClient: HttpClient) {}
 

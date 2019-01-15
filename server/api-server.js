@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const compression = require('compression');
+const cors = require('cors');
 
 // const mockErrors = require('../mocks/errors');
 const mockSettings = require('./mocks/settings');
@@ -24,6 +25,8 @@ module.exports = (PORT) => {
   } else {
     PORT += 1;
   }
+
+  app.use(cors());
 
   app.use('/api', apiRouter);
   app.use(bodyParser.json()); // support json encoded bodies
