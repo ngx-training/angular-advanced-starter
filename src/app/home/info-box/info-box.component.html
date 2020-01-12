@@ -1,0 +1,15 @@
+<p>
+  @Input() message: {{ message }}
+</p>
+<p>
+  Meesage Stream: {{ messageStream$ | async }}
+</p>
+<p>
+  @Input() name: {{ name }}
+</p>
+
+<p>
+  <input type="text" #text />
+  <button (click)="reply(text.value)">Message to Parent</button>
+</p>
+
